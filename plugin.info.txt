@@ -1,0 +1,7 @@
+base   disableloginform
+author asahiro
+email  asahiro.g@gmail.com
+date   2017-01-16
+name   disableloginform plugin
+desc   disable login-form when you want to confine login method to such as OAuth.
+url    https://github.com/asahiro/dokuwiki-plugin-disableloginform
