@@ -38,7 +38,7 @@ class action_plugin_disableloginform extends DokuWiki_Action_Plugin {
 
     if(empty($form->_content) || !is_array($form->_content)){ return; }
 
-    $startPos = findElementByAttribute('_legend', $lang['btn_login']);// findElementByType('openfieldset');
+    $startPos = $form->findElementByAttribute('_legend', $lang['btn_login']);// $form->findElementByType('openfieldset');
     if($startPos === false){ return; }
 
     addHidden('id', null);
