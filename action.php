@@ -59,6 +59,14 @@ class action_plugin_disableloginform extends DokuWiki_Action_Plugin {
     array_splice( $form->_content, $startPos, ($endPos - $startPos + 1) );
     $register_link_content = '<p>'.$lang['reghere'].': '.tpl_actionlink('register','','','',true).'</p>';
     $resendpw_link_content = '<p>'.$lang['pwdforget'].': '.tpl_actionlink('resendpwd','','','',true).'</p>';
+    if ( is_string($form->_content[$startPos]) &&
+         $form->_content[$startPos] == $register_link_content) {
+      array_splice( $form->_content, $startPos, 1);
+    }
+    if ( is_string($form->_content[$startPos]) &&
+         $form->_content[$startPos] == $resendpw_link_content) {
+      array_splice( $form->_content, $startPos, 1)
+    }
   }
 
 }
