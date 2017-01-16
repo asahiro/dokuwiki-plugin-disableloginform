@@ -65,7 +65,7 @@ class action_plugin_disableloginform extends DokuWiki_Action_Plugin {
     }
     if ( is_string($form->_content[$startPos]) &&
          $form->_content[$startPos] == $resendpw_link_content) {
-      array_splice( $form->_content, $startPos, 1)
+      array_splice( $form->_content, $startPos, 1);
     }
   }
 
